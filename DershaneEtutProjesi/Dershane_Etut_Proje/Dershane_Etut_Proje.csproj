@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{35909E18-7487-47CE-8BFD-ACCB9BE0D175}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Dershane_Etut_Proje</RootNamespace>
+    <AssemblyName>Dershane_Etut_Proje</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Backup_Restore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup_Restore.Designer.cs">
+      <DependentUpon>Backup_Restore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DenemeBilgi_Ekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DenemeBilgi_Ekle.Designer.cs">
+      <DependentUpon>DenemeBilgi_Ekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DenemeSilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DenemeSilme.Designer.cs">
+      <DependentUpon>DenemeSilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DersAlma_Kayıt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DersAlma_Kayıt.Designer.cs">
+      <DependentUpon>DersAlma_Kayıt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ders_Islemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ders_Islemleri.Designer.cs">
+      <DependentUpon>Ders_Islemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Devamsızlık_Ekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Devamsızlık_Ekle.Designer.cs">
+      <DependentUpon>Devamsızlık_Ekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Concrate\BasariDurumuBindingSource.cs" />
+    <Compile Include="Entity\Concrate\DenemeBindingSource.cs" />
+    <Compile Include="Entity\Concrate\DenemeCozerBindingSource.cs" />
+    <Compile Include="Entity\Concrate\DersAlirBindingSource.cs" />
+    <Compile Include="Entity\Concrate\DersBindingSource.cs" />
+    <Compile Include="Entity\Concrate\DevamsizlikBindingSource.cs" />
+    <Compile Include="Entity\Concrate\KayitBindingSource.cs" />
+    <Compile Include="Entity\Concrate\OdemeBindingSource.cs" />
+    <Compile Include="Entity\Concrate\OgrenciBindingSource.cs" />
+    <Compile Include="Entity\Concrate\VeliBindingSource.cs" />
+    <Compile Include="GirisYap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisYap.Designer.cs">
+      <DependentUpon>GirisYap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportIslemi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportIslemi.designer.cs">
+      <DependentUpon>ImportIslemi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kayit Yenileme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kayit Yenileme.Designer.cs">
+      <DependentUpon>Kayit Yenileme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KayıtSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KayıtSil.designer.cs">
+      <DependentUpon>KayıtSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kullanıcı_Ekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kullanıcı_Ekle.Designer.cs">
+      <DependentUpon>Kullanıcı_Ekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listele.Designer.cs">
+      <DependentUpon>Listele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odeme_Ekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odeme_Ekle.Designer.cs">
+      <DependentUpon>Odeme_Ekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ogrenci_Isleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ogrenci_Isleri.Designer.cs">
+      <DependentUpon>Ogrenci_Isleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaSayfa.Designer.cs">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubeGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubeGuncelle.Designer.cs">
+      <DependentUpon>SubeGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Veli_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Veli_Form.Designer.cs">
+      <DependentUpon>Veli_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici_Islemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yonetici_Islemleri.Designer.cs">
+      <DependentUpon>Yonetici_Islemleri.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Backup_Restore.resx">
+      <DependentUpon>Backup_Restore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DenemeBilgi_Ekle.resx">
+      <DependentUpon>DenemeBilgi_Ekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DenemeSilme.resx">
+      <DependentUpon>DenemeSilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DersAlma_Kayıt.resx">
+      <DependentUpon>DersAlma_Kayıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ders_Islemleri.resx">
+      <DependentUpon>Ders_Islemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Devamsızlık_Ekle.resx">
+      <DependentUpon>Devamsızlık_Ekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisYap.resx">
+      <DependentUpon>GirisYap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportIslemi.resx">
+      <DependentUpon>ImportIslemi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kayit Yenileme.resx">
+      <DependentUpon>Kayit Yenileme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KayıtSil.resx">
+      <DependentUpon>KayıtSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kullanıcı_Ekle.resx">
+      <DependentUpon>Kullanıcı_Ekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listele.resx">
+      <DependentUpon>Listele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odeme_Ekle.resx">
+      <DependentUpon>Odeme_Ekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ogrenci_Isleri.resx">
+      <DependentUpon>Ogrenci_Isleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnaSayfa.resx">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SubeGuncelle.resx">
+      <DependentUpon>SubeGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Veli_Form.resx">
+      <DependentUpon>Veli_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yonetici_Islemleri.resx">
+      <DependentUpon>Yonetici_Islemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BussinessLayer\BussinessLayer.csproj">
+      <Project>{37E4D071-FE50-40EB-8C6D-0475339E65BF}</Project>
+      <Name>BussinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{567c9fb1-fa71-4eff-87ed-c96cd6235ace}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{62EF59AE-2E0F-41DD-AECA-0A9AB1B4C2FC}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{c1571dcf-8193-44f1-9949-20a6224d0e6b}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
